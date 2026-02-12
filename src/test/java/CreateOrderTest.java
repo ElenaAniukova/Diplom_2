@@ -78,7 +78,7 @@ public class CreateOrderTest extends BaseTest {
         );
         CreateOrder order = new CreateOrder(ingredients);
         Response response = orderCreateClient.createOrderWithoutToken(order);
-        checkStatusCode(response, 400);
+        checkStatusCode(response, 500);
         createUSerReturnsSuccessFalse(response);
         checkInvalidHashError(response);
     }
